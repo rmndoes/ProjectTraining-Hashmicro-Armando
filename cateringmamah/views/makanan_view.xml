@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- cateringmamah.makanan tree view -->
+    <record id="cateringmamah_makanan_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Makanan</field>
+        <field name="model">cateringmamah.makanan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name" />
+                <field name="harga_beli" />
+                <field name="harga_jual" /> 
+                <field name="stok" />
+                <field name="kelompokmakanan_id" />
+                <field name="supplier_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- cateringmamah.makanan form view -->
+    <record id="cateringmamah_makanan_view_form" model="ir.ui.view">
+        <field name="name">Form Makanan</field>
+        <field name="model">cateringmamah.makanan</field>
+        <field name="arch" type="xml">
+            <form string="Makanan">
+                <sheet>
+                    <group name="Makanan" string="Makanan">
+                        <!-- Add your fields here -->
+                        <field name="name" />
+                        <field name="harga_beli" />
+                        <field name="harga_jual" />
+                        <field name="stok" />
+                    </group>
+
+                    <group name="Kelompok Makanan" string="Kelompok Makanan">
+                        <field name="kelompokmakanan_id" /> 
+                    </group>
+
+                    <group name="supplier" string="Supplier">
+                        <field name="supplier_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- cateringmamah.makanan action window -->
+    <record id="cateringmamah_makanan_action" model="ir.actions.act_window">
+        <field name="name">Daftar Makanan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cateringmamah.makanan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="cateringmamah_makanan_menu_act"
+        name="Daftar Makanan"
+        parent="cateringmamah_makanan_menu_categ"
+        action="cateringmamah_makanan_action"
+        sequence="20"/>
+
+</odoo>

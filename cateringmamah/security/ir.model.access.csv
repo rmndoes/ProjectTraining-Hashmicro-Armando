@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cateringmamah_kelompokmakanan,access.cateringmamah.kelompokmakanan,model_cateringmamah_kelompokmakanan,,1,1,1,1
+access_cateringmamah_makanan,access.cateringmamah.makanan,model_cateringmamah_makanan,,1,1,1,1
+access_cateringmamah_person,access.cateringmamah.person,model_cateringmamah_person,,1,1,1,1
+access_cateringmamah_kasir,access.cateringmamah.kasir,model_cateringmamah_kasir,,1,1,1,1
+access_cateringmamah_cleaningservice,access.cateringmamah.cleaningservice,model_cateringmamah_cleaningservice,,1,1,1,1
+access_cateringmamah_supplier,access.cateringmamah.supplier,model_cateringmamah_supplier,,1,1,1,1
+access_cateringmamah_penjualan,access.cateringmamah.penjualan,model_cateringmamah_penjualan,,1,1,1,1
+access_cateringmamah_detailpenjualan,access.cateringmamah.detailpenjualan,model_cateringmamah_detailpenjualan,,1,1,1,1

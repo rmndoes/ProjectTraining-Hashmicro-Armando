@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- cateringmamah.kelompokmakanan tree view -->
+    <record id="cateringmamah_kelompokmakanan_view_tree" model="ir.ui.view">
+        <field name="name">cateringmamah.kelompokmakanan.view.tree</field>
+        <field name="model">cateringmamah.kelompokmakanan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_rak"/>
+                <field name="jml_item" />
+                <field name="daftar" />
+            </tree> 
+        </field>
+    </record>
+
+    <!-- cateringmamah.kelompokmakanan form view -->
+    <record id="cateringmamah_kelompokmakanan" model="ir.ui.view">
+        <field name="name">cateringmamah.kelompokmakanan.view.form</field>
+        <field name="model">cateringmamah.kelompokmakanan</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Makanan">
+                <sheet>
+                    <group name="Kelompok" string="Posisi Kelompok">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                    </group>
+
+                    <group name="Rak" string="Posisi Makanan">
+                        <field name="kode_rak"/>
+                        <field name="makanan_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- cateringmamah.kelompokmakanan action window -->
+    <record id="cateringmamah_kelompokmakanan_action" model="ir.actions.act_window">
+        <field name="name">Kelompok Makanan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cateringmamah.kelompokmakanan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="cateringmamah_kelompokmakanan_menu_act"
+        name="Kelompok Makanan"
+        parent="cateringmamah_makanan_menu_categ"
+        action="cateringmamah_kelompokmakanan_action"
+        sequence="10"/>
+
+</odoo>
